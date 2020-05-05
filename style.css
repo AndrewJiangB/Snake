@@ -1,0 +1,50 @@
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  color: azure;
+  font-family: verdana;
+  font-size: 20px;
+}
+
+.snake {
+  background-color: red;
+  padding: 5px;
+  height: 5px;
+  width: 5px;
+  margin: 5px;
+}
+
+.food {
+  background-color: green;
+  padding: 5px;
+  height: 5px;
+  width: 5px;
+  margin: 5px;
+}
+
+.ground {
+  background-color: lightblue;
+  padding: 5px;
+  height: 5px;
+  width: 5px;
+  margin: 5px;
+}
+
+.row {
+  display: inline-block;
+  margin: auto;
+}
+
+#game_field {
+  background-color: white;
+  padding: 5px;
+  width: 250px;
+  margin: auto;
+}

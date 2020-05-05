@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  </head>
+  <body>
+  <h1>
+    HELLO WORLD
+  </h1>
+  <p id="output">
+    Score: 0
+  </p>
+
+    <div id="game_field">
+      <script>
+      game = new Game();
+      game.setup();
+      setInterval(onTimerTick, 200); // 200 milliseconds = 5 frames per sec
+      var game_over = false;
+
+      function onTimerTick() {
+        if (game_over){
+          alert("GAME OVER");
+          game_over = false;
+          document.getElementById('game_field').innerHTML = "";
+          game = new Game();
+          game.setup();
+          document.getElementById("output").textContent = "Score: 0"
+        }
+        else {
+          game_over = game.player.move();
+          game.draw();
+        }
+      }
+      
+      window.addEventListener("keydown", function(event) {
+        switch (event.code){
+          case 'ArrowLeft':
+            game.player.left();
+            break;
+          case 'ArrowRight':
+            game.player.right();
+            break;
+          case 'ArrowUp':
+            game.player.up();
+            break;
+          case 'ArrowDown':
+            game.player.down();
+            break;
+          default:
+            break;
+        }
+      }, true);
+      </script>
+    </div>
+  </body>
+</html>
