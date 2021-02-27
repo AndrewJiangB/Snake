@@ -11,6 +11,7 @@ p {
   color: azure;
   font-family: verdana;
   font-size: 20px;
+  text-align: center;
 }
 
 .snake {
